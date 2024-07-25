@@ -7,12 +7,12 @@ public class Model {
 
     //class variables
     private @NotNull String name;
-    private final @Range(from = 1, to = Long.MAX_VALUE) int id;
+    private final @NotNull String password;
 
     //constructor
-    public Model(@NotNull String name, @Range(from = 1, to = Long.MAX_VALUE) int id) {
+    public Model(@NotNull String name, @NotNull String password) {
         this.name = name;
-        this.id = id;
+        this.password = password;
     }
 
     //Getter and Setter
@@ -24,8 +24,7 @@ public class Model {
         this.name = name;
     }
 
-    @Range(from = 1, to = Long.MAX_VALUE)
-    public int getId() {
-        return id;
+    public @NotNull String getPassword() {
+        return password;
     }
 }
